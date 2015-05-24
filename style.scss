@@ -1,0 +1,41 @@
+
+body {
+  margin: 0px; // clean browser default css 
+  height: 2000px; //只是为了模拟滑动页面的情况，所以给body加一个很大的高度
+}
+// 这个.btn class只是给button 一些基本的CSS样式，跟我们的功能没有关系
+.btn {
+  display: inline-block;
+  background-color: red;
+  padding: 5px 7px;
+  border-radius: 2px;
+}
+
+.popup-container{
+  display: none; //默认是隐藏起来的
+
+  background: rgba(70, 70, 70, 0.25); // 让overlay的背景半透明
+
+  height: 100%;//以下4行让popup overlay盖住整个body并且从页面最顶端fixed
+  width: 100%;
+  position: fixed;
+  top: 0px;
+
+  text-align: center; //会让 '.popup-content' 里面的字在中间
+}
+.popup-content {
+  background: #fff; 
+  width: 500px; 
+  padding: 20px;
+
+  position: fixed; //一下的三行把这个content这一块fix在屏幕中间一个合适的位置
+  top: 100px;
+  left: 400px;
+}
+// classes which  will be added in js
+.show {
+  display: inline-block; // show popup 
+}
+.scroll-lock {
+  overflow: hidden; //this is added to body which will make screen cannot scroll
+}
